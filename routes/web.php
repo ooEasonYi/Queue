@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/video', 'VideoController@index');
+Route::get('/video/edit/{id?}', 'VideoController@edit');
+Route::get('/video/save/{id?}', 'VideoController@save');
+Route::get('/video/delete/{id?}', 'VideoController@delete');

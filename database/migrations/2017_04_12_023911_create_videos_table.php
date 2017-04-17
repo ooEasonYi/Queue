@@ -21,6 +21,8 @@ class CreateVideosTable extends Migration
             $table->string("localPath");
             $table->string("remotePath");
             $table->integer("status");
+            $table->dateTime("beginDate")->nullable();
+            $table->dateTime("endDate")->nullable();
             $table->timestamps();
         });
     }
