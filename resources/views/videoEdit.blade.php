@@ -49,6 +49,10 @@
 @section('footer')
 <script src="{{ asset('datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>
 <script>
-    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+    $(".form_datetime").datetimepicker({
+        format: 'yyyy-mm-dd hh:ii', 
+        autoclose: true,
+        todayBtn: true
+    });
 </script>
 @endsection
