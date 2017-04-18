@@ -10,7 +10,7 @@
                 <div class="panel-body">
                      {{$msg}}
                      <br/>
-                     <a class="btn btn-default" href=".." role="button">返回列表</a>
+                     <a class="btn btn-default" href="../" role="button">返回列表</a>
                 </div>
             </div>
         </div>

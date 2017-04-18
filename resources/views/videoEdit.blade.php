@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section("head")
+<link href="{{ asset('datetimepicker/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -8,7 +10,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    
+
                     <form action="../save/{{$video['id']}}">
                     <div class="form-group">
                         <label for="title">title</label>
@@ -24,11 +26,11 @@
                     </div>                    
                     <div class="form-group">
                         <label for="begainDate">begainDate</label>
-                        <input type="text" class="form-control" name="beginDate" id="begainDate" value="{{$video['beginDate']}}" placeholder="有效开始时间">
+                        <input type="text" class="form-control form_datetime" readonly  name="beginDate" id="begainDate" value="{{$video['beginDate']}}" placeholder="有效开始时间">
                     </div>                
                     <div class="form-group">
                         <label for="endDate">endDate</label>
-                        <input type="text" class="form-control" name="endDate" id="endDate" value="{{$video['endDate']}}" placeholder="结束时间">
+                        <input type="text" class="form-control form_datetime" readonly  name="endDate" id="endDate" value="{{$video['endDate']}}" placeholder="结束时间">
                     </div>
 
                     <div class="form-group">
@@ -43,4 +45,10 @@
         </div>
     </div>
 </div>
+@endsection
+@section('footer')
+<script src="{{ asset('datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>
+<script>
+    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+</script>
 @endsection
