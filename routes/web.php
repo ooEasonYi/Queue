@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -22,3 +22,7 @@ Route::get('/video', 'VideoController@index');
 Route::get('/video/edit/{id?}', 'VideoController@edit');
 Route::get('/video/save/{id?}', 'VideoController@save');
 Route::get('/video/delete/{id?}', 'VideoController@delete');
+
+Route::get('/getVideos', function () {
+    return App\Videos::paginate();
+});
