@@ -30,7 +30,7 @@ export default {
                 language: "zh-CN",
                 // nativeControlsForTouch:true,
                 sources: [{
-                    src: 'http://www.papa52.info/staticResource/vipZone/489/1492398688951fj6JCI.mp4',
+                    src: 'http://www.52papa.info/staticResource/vipZone/513/14925909443834RfIBe.mp4',
                     type: 'video/mp4'
                 }],
                 // components: {
@@ -57,7 +57,7 @@ export default {
                 //         //     inline: false
                 //         // }
                 //     }
-                // },
+                // },http://10.14.2.15/bber/heartbeat/pemissionVideo?token=VBiDBeEro;
 
             }
         }
